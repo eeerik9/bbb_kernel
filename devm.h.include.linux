@@ -1,0 +1,26 @@
+#ifndef DEVM_H
+#define DEVM_H
+
+
+void devm_kobject_release (struct device *dev, void *res);
+
+struct kobject *devm_kobject_create_and_add (struct device *dev, const char *name, struct kobject *parent);
+
+int devm_kobject_match (struct device *dev, void *res, void *data);
+
+
+void devm_kobject_put (struct device *dev, struct kobject *kobj);
+
+void devm_debugfs_release(struct device *dev, void *dentry);
+
+struct dentry *devm_debugfs_create_dir (struct device *dev, const char *name, struct dentry *parent);
+
+struct dentry *devm_debugfs_create_u32(struct device * dev, const char *name, umode_t mode, struct dentry *parent, u32 *value);
+
+struct dentry *devm_debugfs_create_atomic_t(struct device * dev, const char *name, umode_t mode, struct dentry *parent, atomic_t *value);
+
+struct dentry *devm_debugfs_create_file(struct device * dev, const char *name, umode_t mode, struct dentry *parent, const struct file_operations *debugs_file_ops);
+
+struct dentry *devm_debugfs_create_symlink(struct device * dev, const char *name, struct dentry *parent, const char * symlink_to);
+
+#endif

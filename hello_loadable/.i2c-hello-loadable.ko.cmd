@@ -1,0 +1,1 @@
+cmd_drivers/platform/hello_loadable/i2c-hello-loadable.ko := arm-linux-gnueabi-ld -EL -r  -T /home/erik/Beaglebone/kernel/kernel/scripts/module-common.lds --build-id  -o drivers/platform/hello_loadable/i2c-hello-loadable.ko drivers/platform/hello_loadable/i2c-hello-loadable.o drivers/platform/hello_loadable/i2c-hello-loadable.mod.o

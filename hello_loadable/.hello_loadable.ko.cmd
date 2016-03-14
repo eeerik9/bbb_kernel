@@ -1,0 +1,1 @@
+cmd_drivers/platform/hello_loadable/hello_loadable.ko := arm-linux-gnueabi-ld -EL -r  -T /home/erik/Beaglebone/kernel/kernel/scripts/module-common.lds --build-id  -o drivers/platform/hello_loadable/hello_loadable.ko drivers/platform/hello_loadable/hello_loadable.o drivers/platform/hello_loadable/hello_loadable.mod.o
